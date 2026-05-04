@@ -23,6 +23,10 @@ jobs:
           channel: 'stable'
           cache: true
 
+      - name: Aceptar licencias de Android
+        run: |
+          yes | flutter doctor --android-licenses
+
       - name: Obtener dependencias
         run: flutter pub get
 
